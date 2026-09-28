@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewing Equipment | Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-mug-hot"></i> Bean Boutique
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html" class="active">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events & Workshops</a></li>
+                    <li><a href="offers.html">Special Offers</a></li>
+                    <li><a href="cart.html" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+        <main class="container page-container">
+        <h1 class="text-center color-primary">Artisanal Brewing Gear</h1>
+        <p class="text-center color-muted">Elevate your home coffee ritual with professional-grade brewing tools.</p>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Gear</button>
+            <button class="filter-btn" data-filter="manual">Manual Brewers</button>
+            <button class="filter-btn" data-filter="espresso">Espresso</button>
+            <button class="filter-btn" data-filter="grinder">Grinders</button>
+            
+        </div>
+
+        <div class="equipment-grid" id="equipmentGrid">
+            <div class="equipment-card" data-category="manual">
+                <img src="images/12.jpeg" alt="Glass Chemex Brewer">
+                <div class="equipment-info">
+                    <span class="category-badge">Manual Brewer</span>
+                    <h2 class="equipment-title">Classic Pour-Over Glass Dripper</h2>
+                    <p class="equipment-desc">Delivers a clean, pure cup of coffee while preserving delicate floral aromas.</p>
+                    <div class="price-bar">
+                        <span class="price">$42.00</span>
+                        <button class="btn" onclick="alert('Added Pour-Over Dripper to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+           <div class="equipment-card" data-category="espresso">
+                <img src="images/13.jpeg" alt="Espresso Machine">
+                <div class="equipment-info">
+                    <span class="category-badge">Espresso</span>
+                    <h3 class="equipment-title">Pro-Touch Espresso Machine</h3>
+                    <p class="equipment-desc">Commercial grade 15-bar pressure pump for rich, velvety crema extraction.</p>
+                    <div class="price-bar">
+                        <span class="price">$299.00</span>
+                        <button class="btn" onclick="alert('Added Pro-Touch Espresso Machine to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="equipment-card" data-category="manual">
+                <img src="images/14.jpeg" alt="French Press">
+                <div class="equipment-info">
+                    <span class="category-badge">Manual Brewer</span>
+                    <h3 class="equipment-title">Stainless Steel French Press</h3>
+                    <p class="equipment-desc">Double-wall insulated carafe keeps your coffee hot while filtering fine grounds.</p>
+                    <div class="price-bar">
+                        <span class="price">$35.50</span>
+                        <button class="btn" onclick="alert('Added French Press to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="equipment-card" data-category="grinder">
+                <img src="images/15.jpeg" alt="Coffee Grinder">
+                <div class="equipment-info">
+                    <span class="category-badge">Grinder</span>
+                    <h3 class="equipment-title">Precision Conical Burr Grinder</h3>
+                    <p class="equipment-desc">40 precise grind settings ranging from fine espresso to coarse cold brew.</p>
+                    <div class="price-bar">
+                        <span class="price">$125.00</span>
+                        <button class="btn" onclick="alert('Added Burr Grinder to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Bringing warmth, community, and fine coffee to your doorstep.</p>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Mon - Fri: 7:00 AM - 7:00 PM</p>
+                <p>Sat - Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Bean Boutique. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+       
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            mobileMenu.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const equipmentCards = document.querySelectorAll('.equipment-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                  filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filterValue = btn.getAttribute('data-filter');
+                    equipmentCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filterValue === 'all' || category === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

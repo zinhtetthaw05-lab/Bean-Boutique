@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-mug-hot"></i> Bean Boutique
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events & Workshops</a></li>
+                    <li><a href="offers.html">Special Offers</a></li>
+                    <li><a href="cart.html" class="cart-btn active"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-container">
+        <h1 class="color-primary">Your Shopping Cart</h1>
+        <p class="color-muted">Review your items and proceed to checkout.</p>
+        <div class="cart-wrapper">
+            <div class="cart-table-container">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                       
+                        <tr data-price="18.50">
+                            <td>
+                                <div class="cart-item-info">
+                                    <img src="images/22.jpeg" alt="Ethiopian Coffee">
+                                    <div>
+                                        <strong>Ethiopian Yirgacheffe</strong>
+                                        <div class="color-muted" style="font-size: 0.8rem;">250g Whole Bean</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$18.50</td>
+                            <td>
+                                <div class="qty-control">
+                                    <button class="qty-btn minus-btn">-</button>
+                                    <span class="item-qty">1</span>
+                                    <button class="qty-btn plus-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-total">$18.50</td>
+                            <td><button class="remove-btn"><i class="fa-regular fa-trash-can"></i></button></td>
+                        </tr>
+
+                        <tr data-price="42.00">
+                            <td>
+                                <div class="cart-item-info">
+                                    <img src="images/23.jpeg" alt="Pour Over Dripper">
+                                    <div>
+                                        <strong>Pour-Over Glass Dripper</strong>
+                                        <div class="color-muted" style="font-size: 0.8rem;">Gear / Manual</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$42.00</td>
+                            <td>
+                                <div class="qty-control">
+                                    <button class="qty-btn minus-btn">-</button>
+                                    <span class="item-qty">1</span>
+                                    <button class="qty-btn plus-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-total">$42.00</td>
+                            <td><button class="remove-btn"><i class="fa-regular fa-trash-can"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="summary-card">
+                <h1 class="color-primary mb-1">Order Summary</h1>
+                
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotalPrice">$60.50</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping Fee</span>
+                    <span>$5.00</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span id="grantTotalPrice">$65.50</span>
+                </div>
+
+                <form class="checkout-form" id="checkoutForm">
+                    <h2 class="color-primary mb-1">Delivery Details</h2>
+                    <div class="form-group">
+                        <label for="custName">Name</label>
+                        <input type="text" id="custName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="custAddress">Address</label>
+                        <input type="text" id="custAddress" placeholder="Delivery Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payMethod">Payment Method</label>
+                        <select id="payMethod">
+                            <option value="cod">Cash on Delivery</option>
+                            <option value="card">Credit / Debit Card</option>
+                        </select>
+                    </div>
+                <button type="submit" class="btn full-width" style="margin-top: 1rem;">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Bringing warmth, community, and fine coffee to your doorstep.</p>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Mon - Fri: 7:00 AM - 7:00 PM</p>
+                <p>Sat - Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Bean Boutique. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            mobileMenu.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+            const subtotalElem = document.getElementById('subtotalPrice');
+            const grandTotalElem = document.getElementById('grantTotalPrice');
+            const tableBody = document.getElementById('cartTableBody');
+
+            function updateCartTotals() {
+                let subtotal = 0;
+                const rows = tableBody.querySelectorAll('tr');
+                rows.forEach(row => {
+                    const price = parseFloat(row.getAttribute('data-price'));
+                    const qty = parseInt(row.querySelector('.item-qty').textContent);
+                    const itemTotal = price * qty;
+                    row.querySelector('.item-total').textContent = '$' + itemTotal.toFixed(2);
+                    subtotal += itemTotal;
+                });
+
+                subtotalElem.textContent = '$' + subtotal.toFixed(2);
+                const grandTotal = subtotal > 0 ? subtotal + 5.00 : 0;
+                grandTotalElem.textContent = '$' + grandTotal.toFixed(2);
+            }
+            tableBody.addEventListener('click', (e) => {
+                const target = e.target;
+                const row = target.closest('tr');
+                if (!row) return;
+
+                if (target.classList.contains('plus-btn')) {
+                    const qtyElem = row.querySelector('.item-qty');
+                    qtyElem.textContent = parseInt(qtyElem.textContent) + 1;
+                    updateCartTotals();
+                }
+                if (target.classList.contains('minus-btn')) {
+                    const qtyElem = row.querySelector('.item-qty');
+                    let currentQty = parseInt(qtyElem.textContent);
+                    if (currentQty > 1) {
+                        qtyElem.textContent = currentQty - 1;
+                        updateCartTotals();
+                    }
+                }
+                if (target.closest('.remove-btn')) {
+                    row.remove();
+                    updateCartTotals();
+                }
+            });
+            document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your order! Your purchase was successful.');
+                tableBody.innerHTML = '<tr><td colspan="5" class="text-center">Your cart is currently empty.</td></tr>';
+                updateCartTotals();
+            });
+        });
+    </script>
+</body>
+</html>

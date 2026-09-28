@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Workshops | Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-mug-hot"></i> Bean Boutique
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html" class="active">Events & Workshops</a></li>
+                    <li><a href="offers.html">Special Offers</a></li>
+                    <li><a href="cart.html" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-container">
+        <h1 class="text-center color-primary">Coffee Workshops & Events</h1>
+        <p class="text-center color-muted">Join our expert baristas for hands-on brewing classes and tasting sessions.</p>
+
+        <div class="events-grid">
+            <div class="event-card">
+                <img src="images/16.jpeg" alt="Latte Art Workshop">
+                <div class="event-info">
+                    <span class="event-date"><i class="fa-regular fa-calendar"></i> Oct 12, 2026</span>
+                    <h2 class="event-title">Beginner Latte Art Masterclass</h2>
+                    <p class="event-details">Learn milk steaming techniques and master basic patterns like hearts and tulips from certified baristas.</p>
+                    <div class="event-meta">
+                        <p><i class="fa-regular fa-clock"></i> 10:00 AM - 12:30 PM</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Main Roastery Lab</p>
+                    </div>
+                    <div class="event-price-bar">
+                        <span class="price">$45.00</span>
+                        <button class="btn register-btn" data-event="Beginner Latte Art Masterclass">Book Seat</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="images/17.jpeg" alt="Coffee Cupping">
+                <div class="event-info">
+                    <span class="event-date"><i class="fa-regular fa-calendar"></i> Oct 18, 2026</span>
+                    <h3 class="event-title">Artisanal Coffee Tasting & Cupping</h3>
+                    <p class="event-details">Explore aroma profiles and flavor notes of rare single-origin coffees from Ethiopia, Colombia, and Sumatra.</p>
+                    <div class="event-meta">
+                        <p><i class="fa-regular fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Tasting Lounge</p>
+                    </div>
+                    <div class="event-price-bar">
+                        <span class="price">$30.00</span>
+                        <button class="btn register-btn" data-event="Artisanal Coffee Tasting & Cupping">Book Seat</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="images/18.jpeg" alt="Home Espresso Guide">
+                <div class="event-info">
+                    <span class="event-date"><i class="fa-regular fa-calendar"></i> Nov 02, 2026</span>
+                    <h3 class="event-title">Home Espresso Optimization</h3>
+                    <p class="event-details">Dial in grinder settings, measure extraction ratios, and troubleshoot common espresso brewing mistakes.</p>
+                    <div class="event-meta">
+                        <p><i class="fa-regular fa-clock"></i> 11:00 AM - 1:30 PM</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Main Roastery Lab</p>
+                    </div>
+                    <div class="event-price-bar">
+                        <span class="price">$50.00</span>
+                        <button class="btn register-btn" data-event="Home Espresso Optimization">Book Seat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="bookingModal" class="event-modal">
+        <div class="event-modal-content">
+            <span class="close-btn" id="closeBooking">&times;</span>
+            <h2 class="color-primary mb-1">Workshop Registration</h2>
+            <p class="color-muted mb-2" id="modalEventName" style="font-weight: 600;"></p>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="tickets">Number of Seats</label>
+                    <select id="tickets">
+                        <option value="1">1 Seat</option>
+                        <option value="2">2 Seats</option>
+                        <option value="3">3 Seats</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn full-width" style="margin-top: 0.5rem;">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Bringing warmth, community, and fine coffee to your doorstep.</p>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Mon - Fri: 7:00 AM - 7:00 PM</p>
+                <p>Sat - Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Bean Boutique. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            mobileMenu.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+            const modal = document.getElementById('bookingModal');
+            const closeBtn = document.getElementById('closeBooking');
+            const modalEventName = document.getElementById('modalEventName');
+            const registerBtns = document.querySelectorAll('.register-btn');
+            const bookingForm = document.getElementById('bookingForm');
+
+            registerBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const eventTitle = btn.getAttribute('data-event');
+                    modalEventName.textContent = eventTitle;
+                    modal.style.display = 'flex';
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you! Your registration has been received successfully.');
+                modal.style.display = 'none';
+                bookingForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

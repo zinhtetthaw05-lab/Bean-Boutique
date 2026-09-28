@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers | Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-mug-hot"></i> Bean Boutique
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events & Workshops</a></li>
+                    <li><a href="offers.html" class="active">Special Offers</a></li>
+                    <li><a href="cart.html" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-container">
+        <div class="offers-banner">
+            <h1><i class="fa-solid fa-fire"></i> Weekend Flash Sale</h1>
+            <p>Get up to 25% OFF on selected coffee bundles and home brewing starter kits.</p>
+            
+            <div class="timer-container">
+                <div class="timer-box">
+                    <span class="timer-number" id="hours">12</span>
+                    <span class="timer-label">Hours</span>
+                </div>
+                <div class="timer-box">
+                    <span class="timer-number" id="minutes">45</span>
+                    <span class="timer-label">Mins</span>
+                </div>
+                <div class="timer-box">
+                    <span class="timer-number" id="seconds">30</span>
+                    <span class="timer-label">Secs</span>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center color-primary mb-2">Exclusive Discount Bundles</h2>
+
+        <div class="offers-grid">
+         <div class="offer-card">
+                <span class="offer-badge">SAVE 20%</span>
+                <img src="images/19.jpeg" alt="Morning Duo Bundle">
+                <div class="offer-info">
+                    <h3 class="offer-title">Morning Duo Bundle</h3>
+                    <p class="offer-desc">Includes 1x Ethiopian Yirgacheffe (250g) and 1x Colombian Supremo (250g).</p>
+                    
+                    <div class="promo-box">
+                        <span class="promo-code">DUO20</span>
+                        <button class="copy-btn" onclick="copyPromo('DUO20')"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+
+                    <div class="price-bar">
+                        <div>
+                            <span class="original-price">$34.50</span>
+                            <span class="price">$27.60</span>
+                        </div>
+                        <button class="btn" onclick="alert('Added Morning Duo Bundle to cart!')">Claim Offer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <span class="offer-badge">SAVE 15%</span>
+                <img src="images/24.jpeg" alt="Pour Over Starter Kit">
+                <div class="offer-info">
+                    <h3 class="offer-title">Barista Pour-Over Starter Kit</h3>
+                    <p class="offer-desc">Includes Classic Glass Dripper, Filter Papers, and 1x Single Origin Coffee Bag.</p>
+                    <div class="promo-box">
+                        <span class="promo-code">STARTER15</span>
+                        <button class="copy-btn" onclick="copyPromo('STARTER15')"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <div class="price-bar">
+                        <div>
+                            <span class="original-price">$60.50</span>
+                            <span class="price">$51.40</span>
+                        </div>
+                        <button class="btn" onclick="alert('Added Starter Kit to cart!')">Claim Offer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <span class="offer-badge">SAVE 25%</span>
+                <img src="images/21.jpeg" alt="Espresso Lovers Pack">
+                <div class="offer-info">
+                    <h3 class="offer-title">Espresso Lovers Trio</h3>
+                    <p class="offer-desc">3x 250g Velvet Espresso Blend bags roasted to rich, chocolatey perfection.</p>
+                    <div class="promo-box">
+                        <span class="promo-code">TRIO25</span>
+                        <button class="copy-btn" onclick="copyPromo('TRIO25')"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <div class="price-bar">
+                        <div>
+                            <span class="original-price">$52.50</span>
+                            <span class="price">$39.30</span>
+                        </div>
+                        <button class="btn" onclick="alert('Added Espresso Trio to cart!')">Claim Offer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Bringing warmth, community, and fine coffee to your doorstep.</p>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Mon - Fri: 7:00 AM - 7:00 PM</p>
+                <p>Sat - Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Bean Boutique. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            mobileMenu.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+            let hours = 12;
+            let minutes = 45;
+            let seconds = 30;
+
+            const hElem = document.getElementById('hours');
+            const mElem = document.getElementById('minutes');
+            const sElem = document.getElementById('seconds');
+
+            setInterval(() => {
+                if (seconds > 0) {
+                    seconds--;
+                } else {
+                    seconds = 59;
+                    if (minutes > 0) {
+                        minutes--;
+                    } else {
+                        minutes = 59;
+                        if (hours > 0) hours--;
+                    }
+                }
+                hElem.textContent = hours < 10 ? '0' + hours : hours;
+                mElem.textContent = minutes < 10 ? '0' + minutes : minutes;
+                sElem.textContent = seconds < 10 ? '0' + seconds : seconds;
+            }, 1000);
+        });
+            function copyPromo(code) {
+            navigator.clipboard.writeText(code);
+            alert('Promo Code "' + code + '" copied to clipboard!');
+        }
+    </script>
+</body>
+</html>

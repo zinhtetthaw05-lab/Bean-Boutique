@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Selection | Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-mug-hot"></i> Bean Boutique
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html" class="active">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events & Workshops</a></li>
+                    <li><a href="offers.html">Special Offers</a></li>
+                    <li><a href="cart.html" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-container">
+        <h1 class="text-center color-primary">Our Unique Coffee Catalogue</h1>
+        <p class="text-center color-muted">Explore ethically sourced single-origin beans and artisanal blends.</p>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search coffee blends or tasting notes...">
+            </div>
+        </div>
+
+        <div class="coffee-grid" id="coffeeGrid">
+            <div class="coffee-card" data-name="Ethiopian Yirgacheffe" data-notes="Jasmine, Lemon, Bergamot">
+                <img src="images/8.jpeg" alt="Ethiopian Coffee">
+                <div class="coffee-info">
+                    <span class="origin-badge">Single Origin</span>
+                    <h2 class="coffee-title">Ethiopian Yirgacheffe</h2>
+                    <p class="tasting-notes"><strong>Notes:</strong> Jasmine, Lemon, Bergamot</p>
+                    <p class="tasting-notes"><strong>Brew:</strong> Pour-over / Chemex</p>
+                    <div class="price-bar">
+                        <span class="price">$18.50</span>
+                        <button class="btn" onclick="alert('Added Ethiopian Yirgacheffe to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card" data-name="Colombian Supremo" data-notes="Chocolate, Caramel, Roasted Hazelnut">
+                <img src="images/9.jpeg" alt="Colombian Coffee">
+                <div class="coffee-info">
+                    <span class="origin-badge">Single Origin</span>
+                    <h3 class="coffee-title">Colombian Supremo</h3>
+                    <p class="tasting-notes"><strong>Notes:</strong> Chocolate, Caramel, Hazelnut</p>
+                    <p class="tasting-notes"><strong>Brew:</strong> Espresso / French Press</p>
+                    <div class="price-bar">
+                        <span class="price">$16.00</span>
+                        <button class="btn" onclick="alert('Added Colombian Supremo to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card" data-name="Velvet Espresso Blend" data-notes="Dark Chocolate, Black Cherry, Creamy">
+                <img src="images/10.jpeg" alt="coffee image">
+                <div class="coffee-info">
+                    <span class="origin-badge">Signature Blend</span>
+                    <h3 class="coffee-title">Velvet Espresso Blend</h3>
+                    <p class="tasting-notes"><strong>Notes:</strong> Dark Chocolate, Black Cherry</p>
+                    <p class="tasting-notes"><strong>Brew:</strong> Espresso Machine / Moka Pot</p>
+                    <div class="price-bar">
+                        <span class="price">$17.50</span>
+                        <button class="btn" onclick="alert('Added Velvet Espresso Blend to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card" data-name="Sumatra Mandheling" data-notes="Earthy, Cedar, Dark Cocoa">
+                <img src="images/11.jpeg" alt="Sumatra Coffee">
+                <div class="coffee-info">
+                    <span class="origin-badge">Single Origin</span>
+                    <h3 class="coffee-title">Sumatra Mandheling</h3>
+                    <p class="tasting-notes"><strong>Notes:</strong> Earthy, Cedar, Dark Cocoa</p>
+                    <p class="tasting-notes"><strong>Brew:</strong> French Press / Cold Brew</p>
+                    <div class="price-bar">
+                        <span class="price">$19.00</span>
+                        <button class="btn" onclick="alert('Added Sumatra Mandheling to cart!')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-9a29c511-04b0-4030-a798-d4bd38d17a8e" data-elfsight-app-lazy></div>
+
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-a1689de1-845b-4623-887e-345ec0fcdd2d" data-elfsight-app-lazy></div>
+   
+<footer>
+        <div class="container footer-grid">
+            <div>
+                <h3><i class="fa-solid fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Bringing warmth, community, and fine coffee to your doorstep.</p>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Mon - Fri: 7:00 AM - 7:00 PM</p>
+                <p>Sat - Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Bean Boutique. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            mobileMenu.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+            const searchInput = document.getElementById('searchInput');
+            const cards = document.querySelectorAll('.coffee-card');
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                cards.forEach(card => {
+                    const name = card.getAttribute('data-name').toLowerCase();
+                    const notes = card.getAttribute('data-notes').toLowerCase();
+
+                    if (name.includes(query) || notes.includes(query)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
